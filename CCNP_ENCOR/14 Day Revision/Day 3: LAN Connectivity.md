@@ -216,7 +216,7 @@ Switch(config-if)# ip dhcp snooping trust
   Switch# show vlan access-map
   ```
 
----
+
 
 ## 🔥 Exam Alert: Key Focus Areas for ENCOR 350-401
 
@@ -226,4 +226,4 @@ Switch(config-if)# ip dhcp snooping trust
 - **Inter-VLAN Routing**: Router-on-a-Stick vs. Layer 3 Switch (SVI)  
 - **VACLs**: Layer 2 filtering inside a VLAN  
 - **Security**: VLAN hopping, double tagging, rogue DHCP servers, and mitigation
-```
+
