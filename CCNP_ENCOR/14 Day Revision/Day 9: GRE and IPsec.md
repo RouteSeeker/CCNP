@@ -141,8 +141,8 @@ show crypto ipsec sa
 
 ## 🔥 EXAM ALERT: KEY FOCUS AREAS
 
-1️⃣ GRE Fundamentals – Understand encapsulation and limitations.
-2️⃣ Basic GRE Tunnel Configuration – Master tunnel source, destination, and IP addressing.
-3️⃣ Adding IPsec – Configure IKE, IPsec transform sets, and ACLs.
-4️⃣ Tunnel Verification – Use "show interface Tunnel0", "show crypto isakmp sa".
-5️⃣ Troubleshooting – Identify issues related to ACL mismatches, unreachable tunnel endpoints, and NAT interference.
+1. **GRE Fundamentals** – Understand encapsulation and limitations.
+2. **Basic GRE Tunnel Configuration** – Master tunnel source, destination, and IP addressing.
+3. **Adding IPsec** – Configure IKE, IPsec transform sets, and ACLs.
+4. **Tunnel Verification** – Use "show interface Tunnel0", "show crypto isakmp sa".
+5. **Troubleshooting** – Identify issues related to ACL mismatches, unreachable tunnel endpoints, and NAT interference.
