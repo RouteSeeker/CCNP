@@ -27,11 +27,11 @@ By the end of **Day 9**, you will be able to:
 
 ## 1. GRE TUNNELING FUNDAMENTALS
 
-### 📌 What is GRE?
+### What is GRE?
 
 GRE, or **Generic Routing Encapsulation**, is a lightweight tunneling protocol developed by Cisco. It encapsulates packets from one protocol inside an IP packet, allowing the transmission of various network layer protocols over an IP network. GRE adds a simple header (typically about 24 bytes) that contains information such as the version and protocol type. It operates at **Layer 3** and is inherently **stateless**, meaning it does not keep track of sessions or provide any security mechanisms by itself.
 
-### ✅ Key Characteristics of GRE:
+### Key Characteristics of GRE:
 - **Supports multiple protocols**: GRE can encapsulate IPv4, IPv6, and even non-IP traffic.
 - **Minimal overhead**: With only a small header, GRE is efficient for tunneling.
 - **Stateless design**: No built-in encryption, authentication, or keepalives (though GRE keepalives can be enabled if required).
@@ -43,13 +43,13 @@ GRE, or **Generic Routing Encapsulation**, is a lightweight tunneling protocol d
 
 ## 2. BASIC GRE TUNNEL CONFIGURATION
 
-### 🏗 GRE Tunnel Components:
+### GRE Tunnel Components:
 - **Tunnel Interface**: A virtual interface (e.g., Tunnel0) that terminates the GRE tunnel.
 - **Tunnel Source**: The IP address or physical interface from which the GRE packets are sent.
 - **Tunnel Destination**: The IP address of the remote endpoint where GRE packets are decapsulated.
 - **IP Addressing on the Tunnel**: Assign a small subnet (typically a /30) for point-to-point communication between the tunnel endpoints.
 
-### ⚙️ Example GRE Tunnel Configuration:
+### Example GRE Tunnel Configuration:
 
 #### On **Router A**:
 ```bash
@@ -75,17 +75,17 @@ This configuration creates a logical, point-to-point link between the routers. O
 
 ## 3. ADDING IPSEC FOR SECURITY
 
-### 📌 Why Add IPsec?
+### Why Add IPsec?
 Although GRE is versatile and simple, it does not provide any security by itself. **IPsec** provides robust security features such as encryption, integrity, and authentication.
 
-### 🔑 **IPsec Fundamentals**:
+### **IPsec Fundamentals**:
 - **IKE Phase 1**: Establishes a secure management tunnel (ISAKMP) between the peers, negotiating the encryption and hashing algorithms, Diffie-Hellman group, and lifetime.
 - **IKE Phase 2**: Negotiates the IPsec Security Associations (SAs) that define the encryption and authentication parameters used to secure GRE traffic.
 - **Transform Set**: Specifies which encryption (e.g., AES) and hashing (e.g., SHA) algorithms will be used.
 
-### ✅ **Combining GRE and IPsec**:
+### **Combining GRE and IPsec**:
 
-#### 1️⃣ Configure IKE Phase 1 (ISAKMP policy) on both routers:
+#### 1️ Configure IKE Phase 1 (ISAKMP policy) on both routers:
 ```bash
 crypto isakmp policy 10
  encryption aes 256
@@ -122,14 +122,14 @@ interface GigabitEthernet0/1
 
 ## 4. TUNNEL STATUS VERIFICATION COMMANDS
 
-### ✅ GRE Tunnel Verification:
+### GRE Tunnel Verification:
 ```bash
 show ip interface brief | include Tunnel
 show interface Tunnel0
 ping 10.10.10.2
 ```
 
-### ✅ IPsec Verification:
+### IPsec Verification:
 ```bash
 show crypto isakmp sa
 show crypto ipsec sa
